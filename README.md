@@ -133,8 +133,6 @@ Create `translation_config.json` for project defaults:
 
 **TransLLM** employs a sophisticated multi-stage translation algorithm that ensures code structure preservation while translating human-readable content. Here's the core algorithm:
 
-<div align="center">
-
 ### 🧠 Translation Algorithm
 
 ```pseudocode
@@ -173,8 +171,6 @@ FUNCTION translate_project(project_path, target_language):
     RETURN translation_results, validation_report
 END FUNCTION
 ```
-
-</div>
 
 ### 🎯 Key Algorithm Features
 
