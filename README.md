@@ -129,6 +129,63 @@ Create `translation_config.json` for project defaults:
 }
 ```
 
+## 🔬 How It Works
+
+**TransLLM** employs a sophisticated multi-stage translation algorithm that ensures code structure preservation while translating human-readable content. Here's the core algorithm:
+
+<div align="center">
+
+### 🧠 Translation Algorithm
+
+```pseudocode
+FUNCTION translate_project(project_path, target_language):
+    // Stage 1: Project Discovery & Analysis
+    discovered_files = scan_directory(project_path)
+    translatable_files = filter_supported_extensions(discovered_files)
+    total_chunks = estimate_chunk_count(translatable_files)
+    
+    // Stage 2: Smart File Chunking
+    FOR EACH file IN translatable_files:
+        chunks = split_into_chunks(file, chunk_size)
+        FOR EACH chunk:
+            chunk.add_boundary_markers(unique_id)
+            chunk.preserve_structure_metadata()
+    
+    // Stage 3: Concurrent LLM Translation  
+    translation_pool = create_thread_pool(max_concurrent)
+    FOR EACH chunk IN parallel:
+        translated_chunk = llm_translate(
+            chunk.content,
+            source_lang,
+            target_lang,
+            preserve_code_structure=True
+        )
+        validate_chunk_integrity(translated_chunk)
+    
+    // Stage 4: Intelligent Chunk Reconstruction
+    FOR EACH file:
+        merged_content = merge_chunks_by_boundary_markers()
+        validate_structure_preservation(original, merged_content)
+        validate_syntax_correctness(merged_content)
+    
+    // Stage 5: Quality Assurance
+    validation_report = run_comprehensive_validation()
+    RETURN translation_results, validation_report
+END FUNCTION
+```
+
+</div>
+
+### 🎯 Key Algorithm Features
+
+| Stage | Innovation | Benefit |
+|-------|------------|----------|
+| **Discovery** | Smart file filtering | Only processes translatable content |
+| **Chunking** | Boundary marker injection | Perfect chunk reconstruction |
+| **Translation** | Structure-aware prompting | Preserves code syntax & formatting |
+| **Reconstruction** | Marker-based merging | Eliminates join errors |
+| **Validation** | Multi-layer integrity checks | Ensures translation quality |
+
 ## 📊 Translation Process
 
 1. **Project Analysis**: Scans supported files and estimates chunks
