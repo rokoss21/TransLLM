@@ -1,0 +1,25 @@
+{
+  "llm_provider": "groq",
+  "model_name": "llama-3.1-70b-versatile",
+  "api_key": "YOUR_GROQ_API_KEY_HERE",
+  "target_language": "English",
+  "source_language": "Russian",
+  "chunk_size": 100,
+  "temperature": 0.0,
+  "max_concurrent_requests": 5,
+  "supported_extensions": [
+    ".py", ".js", ".ts", ".jsx", ".tsx", ".html", ".css", ".scss",
+    ".java", ".cpp", ".c", ".h", ".cs", ".php", ".rb", ".go",
+    ".rs", ".swift", ".kt", ".dart", ".vue", ".svelte"
+  ],
+  "exclude_dirs": [
+    "node_modules", "__pycache__", ".git", ".svn", ".hg",
+    "venv", "env", ".env", "dist", "build", ".next",
+    "target", "bin", "obj", ".pytest_cache", ".mypy_cache"
+  ],
+  "exclude_files": [
+    "README.md", "LICENSE", "CHANGELOG.md", "requirements.txt",
+    "package.json", "package-lock.json", "yarn.lock",
+    ".gitignore", ".dockerignore", "Dockerfile"
+  ]
+}

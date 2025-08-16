@@ -1,0 +1,10 @@
+# TransLLM Requirements
+
+# LLM Providers (install one or more)
+groq>=0.4.1              # For Groq API
+openai>=1.0.0            # For OpenAI API
+anthropic>=0.7.0         # For Anthropic API
+
+# Optional: for enhanced functionality
+aiofiles>=23.0.0         # Async file operations
+asyncio-throttle>=1.0.2  # Rate limiting

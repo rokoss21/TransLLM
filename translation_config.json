@@ -1,0 +1,153 @@
+{
+  "default_config": {
+    "target_language": "English",
+    "source_language": "Russian",
+    "llm_provider": "groq",
+    "chunk_size": 150,
+    "max_concurrent_requests": 10,
+    "custom_instructions": ""
+  },
+  "llm_providers": {
+    "groq": {
+      "models": [
+        "openai/gpt-oss-120b",
+        "mixtral-8x7b-32768",
+        "llama3-70b-8192"
+      ]
+    },
+    "openai": {
+      "models": [
+        "gpt-4",
+        "gpt-4-turbo",
+        "gpt-3.5-turbo"
+      ]
+    },
+    "anthropic": {
+      "models": [
+        "claude-3-sonnet-20240229",
+        "claude-3-haiku-20240307",
+        "claude-3-opus-20240229"
+      ]
+    }
+  },
+  "supported_languages": [
+    "English",
+    "Russian",
+    "Chinese",
+    "Japanese",
+    "Korean",
+    "French",
+    "German",
+    "Spanish",
+    "Italian",
+    "Portuguese",
+    "Dutch",
+    "Swedish",
+    "Norwegian",
+    "Danish",
+    "Finnish",
+    "Polish",
+    "Czech",
+    "Hungarian",
+    "Turkish",
+    "Arabic",
+    "Hebrew",
+    "Hindi",
+    "Thai",
+    "Vietnamese"
+  ],
+  "custom_instructions_templates": {
+    "preserve_chinese": "保留所有中文字符和表达方式，不要翻译技术术语",
+    "preserve_japanese": "すべての日本語文字と表現を保持し、技術用語は翻訳しない",
+    "formal_tone": "Use formal and professional tone in all translations",
+    "casual_tone": "Use casual and friendly tone in translations",
+    "preserve_technical": "Preserve all technical terms, API names, and framework-specific terminology",
+    "preserve_brand_names": "Do not translate brand names, product names, or company names"
+  },
+  "supported_file_extensions": [
+    ".py",
+    ".js",
+    ".ts",
+    ".jsx",
+    ".tsx",
+    ".html",
+    ".css",
+    ".scss",
+    ".sass",
+    ".less",
+    ".java",
+    ".cpp",
+    ".c",
+    ".h",
+    ".hpp",
+    ".cs",
+    ".php",
+    ".rb",
+    ".go",
+    ".rs",
+    ".swift",
+    ".kt",
+    ".dart",
+    ".vue",
+    ".svelte",
+    ".scala",
+    ".clj",
+    ".cljs",
+    ".elm",
+    ".hs",
+    ".ml",
+    ".fs",
+    ".vb",
+    ".pl",
+    ".lua",
+    ".r",
+    ".jl"
+  ],
+  "exclude_directories": [
+    "node_modules",
+    "__pycache__",
+    ".git",
+    ".svn",
+    ".hg",
+    "venv",
+    "env",
+    ".env",
+    "dist",
+    "build",
+    ".next",
+    ".nuxt",
+    "target",
+    "bin",
+    "obj",
+    ".pytest_cache",
+    ".mypy_cache",
+    "vendor",
+    "packages",
+    ".vscode",
+    ".idea",
+    "coverage",
+    ".nyc_output"
+  ],
+  "exclude_files": [
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md",
+    "CHANGELOG.txt",
+    "requirements.txt",
+    "package.json",
+    "package-lock.json",
+    "yarn.lock",
+    "composer.json",
+    "composer.lock",
+    ".gitignore",
+    ".dockerignore",
+    "Dockerfile",
+    "docker-compose.yml",
+    "Makefile",
+    "CMakeLists.txt",
+    "go.mod",
+    "go.sum",
+    "Cargo.toml",
+    "Cargo.lock"
+  ]
+}
