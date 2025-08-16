@@ -260,9 +260,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 **Created by [Emil Rokossovskiy](https://github.com/rokoss21)**
 
-- GitHub: [@rokoss21](https://github.com/rokoss21)
-- Company: Equilibrium LLC
-
 If you find this project useful, please consider giving it a ⭐!
 
 ---
